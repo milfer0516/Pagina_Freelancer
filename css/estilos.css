@@ -1,0 +1,59 @@
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Krub", sans-serif; /* Este valor de 16px equivale a 1rem */
+}
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+img {
+    width: 100%;
+}
+/* Header */
+.titulo {
+    text-align: center;
+    font-size: 3.8rem;
+}
+.titulo span {
+    font-size: 2rem;
+}
+.img-hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    height: 60rem;
+    margin-top: 0;
+}
+/* Navegación */
+.nav-bg {
+    background-color: var(--secundario);
+}
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+}
+.navegacion__enlace {
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1.5rem;
+}
+.navegacion__enlace:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+    /* padding: 1.5rem; */
+}
+@media (min-width: 768px) {
+}
