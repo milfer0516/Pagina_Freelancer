@@ -8,7 +8,14 @@
 
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
 }
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
     box-sizing: border-box;
     font-size: 16px;
@@ -21,6 +28,9 @@ body {
 img {
     width: 100%;
 }
+header {
+    background-color: var(--blanco);
+}
 /* Header */
 .titulo {
     text-align: center;
@@ -29,11 +39,20 @@ img {
 .titulo span {
     font-size: 2rem;
 }
+.titulo-img {
+    color: var(--blanco);
+}
 .img-hero {
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
-    height: 60rem;
-    margin-top: 0;
+    background-size: cover;
+    height: 45rem;
+    padding: 1rem;
+}
+@media (max-width: 568px) {
+    .img-hero {
+        height: 36rem;
+    }
 }
 /* Navegación */
 .nav-bg {
@@ -41,7 +60,15 @@ img {
 }
 .navegacion {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-between;
+}
+
+@media (min-width: 560px) {
+    .navegacion {
+        flex-direction: row;
+    }
 }
 .navegacion__enlace {
     text-decoration: none;
@@ -54,6 +81,4 @@ img {
     background-color: var(--primario);
     color: var(--oscuro);
     /* padding: 1.5rem; */
-}
-@media (min-width: 768px) {
 }
