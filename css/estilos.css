@@ -201,3 +201,24 @@ header {
     text-align: center;
     font-weight: 700;
 }
+
+/* CONTACTO */
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%); /* Este parametro utiliza el valor mas pequeño */
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+.titulo-formulario {
+    text-align: center;
+    color: var(--primario);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
