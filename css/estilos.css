@@ -44,6 +44,23 @@ img {
     padding: 2rem;
     width: 90%;
 }
+.boton {
+    background-color: var(--secundario);
+    padding: 1rem 3rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    margin-top: 3rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+.boton:hover {
+    cursor: pointer;
+}
 /* Tipografia */
 h1 {
     font-size: 3.8rem;
@@ -125,19 +142,7 @@ header {
 .contenido-hero p {
     color: var(--blanco);
 }
-.boton {
-    background-color: var(--secundario);
-    padding: 1rem 3rem;
-    color: var(--blanco);
-    text-transform: uppercase;
-    margin-top: 3rem;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 2rem;
-    border-radius: 0.5rem;
-    width: 90%;
-    text-align: center;
-}
+
 @media (min-width: 768px) {
     .boton {
         width: auto;
@@ -221,4 +226,34 @@ header {
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 1rem;
+}
+.contenedor-inputs {
+}
+.inputs {
+    margin-bottom: 1rem;
+}
+.inputs label {
+    color: var(--blanco);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.input-text {
+    width: 100%;
+    border: none;
+    font-size: 1.8rem;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+.enviar {
+    display: flex;
+    justify-content: flex-end;
+}
+.btn-input {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .btn-input {
+        width: auto;
+    }
 }
