@@ -4,8 +4,9 @@
     --primario: #ffc107;
     --secundario: #0097a7;
     --gris: #757575;
+    --griClaro: #dfe9f3;
 }
-
+/* Globales */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
@@ -17,10 +18,15 @@ html {
 }
 
 body {
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: "Krub", sans-serif; /* Este valor de 16px equivale a 1rem */
+    font-size: 16px; /* Este valor de 16px equivale a 1rem */
+    font-family: "Krub", sans-serif;
+    background-image: linear-gradient(
+        to top,
+        var(--griClaro) 0%,
+        var(--blanco) 100%
+    );
 }
+
 .contenedor {
     max-width: 120rem;
     margin: 0 auto;
@@ -28,31 +34,38 @@ body {
 img {
     width: 100%;
 }
-header {
+.sombra {
+    /*  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+        0px 5px 15px 5px rgba(112, 114, 112, 0.42); */
+    box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+        0px 5px 10px 5px rgba(0, 0, 0, 0.44);
     background-color: var(--blanco);
+    border-radius: 1rem;
+    padding: 2rem;
+    width: 90%;
 }
-/* Header */
-.titulo {
-    text-align: center;
+/* Tipografia */
+h1 {
     font-size: 3.8rem;
 }
+h2 {
+    font-size: 2.8rem;
+}
+h3 {
+    font-size: 1.8rem;
+}
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+/* Header */
 .titulo span {
     font-size: 2rem;
+    font-weight: 700;
 }
-.titulo-img {
-    color: var(--blanco);
-}
-.img-hero {
-    background-image: url(../img/hero.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 45rem;
-    padding: 1rem;
-}
-@media (max-width: 568px) {
-    .img-hero {
-        height: 36rem;
-    }
+header {
+    background-color: var(--blanco);
 }
 /* Navegación */
 .nav-bg {
@@ -81,4 +94,110 @@ header {
     background-color: var(--primario);
     color: var(--oscuro);
     /* padding: 1.5rem; */
+}
+
+.img-hero {
+    background-image: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 45rem;
+    /* padding: 1rem; */
+    position: relative;
+    margin-bottom: 2rem;
+}
+.contenido-hero {
+    position: absolute;
+    background-color: rgba(12, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 568px) {
+    .img-hero {
+        height: 36rem;
+    }
+}
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);
+}
+.boton {
+    background-color: var(--secundario);
+    padding: 1rem 3rem;
+    color: var(--blanco);
+    text-transform: uppercase;
+    margin-top: 3rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    width: 90%;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .boton {
+        width: auto;
+    }
+}
+/* Main */
+/* .contenedor-servicios {
+    width: 90%;
+} */
+/* .trabajos {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: calc(33.3% - 1rem);
+    text-align: center;
+}
+.trabajos svg {
+    background-color: var(--primario);
+    width: 10.2rem;
+    height: 10.2rem;
+    border-radius: 50%;
+}
+@media (max-width: 768px) {
+    .trabajos {
+        display: flex;
+        flex-direction: column;
+    }
+}
+ */
+@media (min-width: 768px) {
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 1.5rem; /* Este es la funcion para separar las colomnas con
+        medida especifica */
+        align-items: center;
+    }
+}
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: 400;
+}
+.servicio p {
+    text-align: center;
+    line-height: 1.5;
+}
+.servicio .iconos {
+    width: 15rem;
+    height: 15rem;
+    background-color: var(--primario);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 50%;
+}
+.footer {
+    text-align: center;
+    font-weight: 700;
 }
